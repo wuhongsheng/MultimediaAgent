@@ -1,7 +1,7 @@
 from outlines.models import openai
 from swarm import Swarm, Agent
 from openai import OpenAI
-from swarm.repl import run_demo_loop
+from run import run_demo_loop
 import os
 from minicpm import llama_cpp_inference
 import subprocess

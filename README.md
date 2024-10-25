@@ -26,6 +26,7 @@ export API_KEY="your api key"
 export API_BASE="your api server url"
 python agents.py
 ```
+![](./imgs/img.png)
 
 ## License
 
