@@ -1,4 +1,3 @@
-from outlines.models import openai
 from swarm import Swarm, Agent
 from openai import OpenAI
 from run import run_demo_loop
@@ -70,14 +69,14 @@ triage_agent = Agent(
 video_agent = Agent(
     name="Video Agent",
     instructions="负责处理视频或图像相关任务，并回复相关结果。会话完成或者出错返回triage_agent",
-    functions=[video_question_answer, transfer_back_to_triage],
+    functions=[video_question_answer, file_process_by_ffmpeg, transfer_back_to_triage],
     model=model,
 )
 
 audio_agent = Agent(
     name="Audio Agent",
     instructions="负责处理音频相关任务，并回复相关结果，会话完成或者出错返回triage_agent",
-    functions=[asr, transfer_back_to_triage],
+    functions=[asr, file_process_by_ffmpeg, transfer_back_to_triage],
     model=model,
 )
 
